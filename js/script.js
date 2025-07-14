@@ -97,7 +97,7 @@ function loadTasks() {
 
 function addTask() {
   const taskInput = document.getElementById("task-input");
-  if (!taskInput.value.trim()) return; // Prevent empty tasks
+  if (!taskInput.value.trim()) return;
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   tasks.push({ name: taskInput.value, completed: false });
   localStorage.setItem("tasks", JSON.stringify(tasks));
