@@ -1,4 +1,4 @@
-// Fortune Generator
+
 const fortunes = [
   "You will have a great day!",
   "Success is coming your way.",
@@ -31,11 +31,10 @@ function changeFontStyle() {
 }
 
 function getRandomColor() {
-  // Always return a 6-digit hex color
+
   return `#${Math.floor(Math.random()*16777215).toString(16).padStart(6, '0')}`;
 }
 
-// Hero Converter
 function convert() {
   const value = parseFloat(document.getElementById("weight").value);
   const unit = document.getElementById("unit").value;
@@ -51,20 +50,19 @@ function convert() {
   document.getElementById("result").innerText = `${result.toFixed(2)} ${resultUnit}`;
 }
 
-// Stopwatch
-let timer = 0; // in milliseconds
+let timer = 0;
 let interval = null;
 
 function updateTimer() {
-  timer += 10; // increase by 10ms
+  timer += 10;
   const seconds = Math.floor(timer / 1000);
-  const ms = Math.floor((timer % 1000) / 10); // two digits
+  const ms = Math.floor((timer % 1000) / 10);
   document.getElementById("timer").innerText = `${seconds}.${ms.toString().padStart(2, '0')}`;
 }
 
 function startTimer() {
   if (!interval) {
-    interval = setInterval(updateTimer, 10); // update every 10ms
+    interval = setInterval(updateTimer, 10);
   }
 }
 
@@ -80,7 +78,6 @@ function resetTimer() {
   document.getElementById("timer").innerText = "0.00";
 }
 
-// To-Do List
 function loadTasks() {
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   const list = document.getElementById("task-list");
@@ -120,17 +117,13 @@ function deleteTask(index) {
   loadTasks();
 }
 
-// Only run these after DOM is ready!
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("fortune").innerText = fortunes[Math.floor(Math.random() * fortunes.length)];
   loadTasks();
 
-  // Animate each floating-row section from a random direction
   document.querySelectorAll('.floating-row section').forEach(section => {
-    // Generate random X and Y offsets between -120px and 120px (excluding 0)
     let x = Math.floor(Math.random() * 241) - 120;
     let y = Math.floor(Math.random() * 241) - 120;
-    // Avoid both being 0
     if (Math.abs(x) < 40 && Math.abs(y) < 40) x += 60;
 
     section.style.opacity = '0';
@@ -143,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 80);
   });
 
-  // Theme toggle
   const themeBtn = document.getElementById('theme-toggle');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const savedTheme = localStorage.getItem('theme');

@@ -1,4 +1,4 @@
-/* Import a modern, futuristic font */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 body {
@@ -216,8 +216,8 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 4px;           /* Reduced gap for closer blocks */
-  margin-top: 32px;   /* Optional: reduce vertical margin */
+  gap: 4px;    
+  margin-top: 32px;   
   margin-bottom: 32px;
 }
 
@@ -239,7 +239,6 @@ input::placeholder {
   transform: translateY(-4px) scale(1.02);
 }
 
-/* Dark mode styles */
 body.dark-mode {
   background: #181c22;
   color: #e3e6eb;
@@ -259,7 +258,7 @@ body.dark-mode h2 {
 
 body.dark-mode #fortune-box {
   background: #23272f;
-  border-color: #23272f;
+  border-color: #4e5563;
 }
 
 body.dark-mode button,
@@ -299,7 +298,6 @@ body.dark-mode #task-list li:hover {
   background: #353b48;
 }
 
-/* Responsive: stack on small screens */
 @media (max-width: 900px) {
   .floating-row {
     flex-direction: column;
