@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 2 - CSE391</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <button id="theme-toggle" style="position:fixed;top:18px;right:24px;z-index:1000;">🌙 Dark Mode</button>
+  <h1>Assignment 2: JavaScript Web Applications</h1>
+
+  <div class="floating-row">
+    <!-- Fortune Generator -->
+    <section id="fortune-section">
+      <h2>Fortune Generator</h2>
+      <div class="fortune-luck">
+        <span class="clover"></span>
+        <span class="fortune-settings">
+          <span class="settings-icon"></span>
+        </span>
+      </div>
+      <div id="fortune-box">
+        <p id="fortune"></p>
+      </div>
+      <div id="fortune-controls">
+        <button onclick="changeFontColor()">Change Font Color</button>
+        <button onclick="changeBackgroundColor()">Change Background</button>
+        <button onclick="changeBorderColor()">Change Border</button>
+        <button onclick="changeFontStyle()">Change Font Style</button>
+      </div>
+    </section>
+
+    <!-- Hero Converter -->
+    <section id="hero-section">
+      <h2>Hero Converter</h2>
+      <div class="converter-logo">
+        <span class="kg-logo">KG</span>
+        <span class="swap-arrow"></span>
+        <span class="lb-logo">LB</span>
+      </div>
+      <input type="number" id="weight" placeholder="Enter value" />
+      <select id="unit">
+        <option value="kg">Kilograms to Pounds</option>
+        <option value="lb">Pounds to Kilograms</option>
+      </select>
+      <button onclick="convert()">Convert</button>
+      <p>Result: <span id="result"></span></p>
+    </section>
+  </div>
+
+  <div class="floating-row">
+    <!-- Stopwatch -->
+    <section id="stopwatch-section">
+      <h2>Stopwatch</h2>
+      <div class="timer-logo">
+        <span class="clock-icon"></span>
+      </div>
+      <p id="timer">0.00</p>
+      <button onclick="startTimer()">Start</button>
+      <button onclick="stopTimer()">Stop</button>
+      <button onclick="resetTimer()">Reset</button>
+    </section>
+
+    <!-- To-Do List -->
+    <section id="todo-section">
+      <h2>To-Do List</h2>
+      <div class="todo-logo">
+        <span class="todo-icon"></span>
+      </div>
+      <input type="text" id="task-input" placeholder="Enter new task" />
+      <button onclick="addTask()">Add Task</button>
+      <ul id="task-list"></ul>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
