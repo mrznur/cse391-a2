@@ -1,4 +1,3 @@
-
 const fortunes = [
   "You will have a great day!",
   "Success is coming your way.",
@@ -88,6 +87,9 @@ function loadTasks() {
       <input type="checkbox" ${task.completed ? "checked" : ""} onchange="toggleTask(${index})">
       <span style="text-decoration: ${task.completed ? 'line-through' : 'none'}">${task.name}</span>
       <button onclick="deleteTask(${index})">Delete</button>
+      <div class="task-status" style="font-size:0.95em; margin-left:8px; color:${task.completed ? '#43ea7a' : '#e57373'};">
+        ${task.completed ? 'Completed' : 'Incomplete'}
+      </div>
     `;
     list.appendChild(li);
   });
